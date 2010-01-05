@@ -20,9 +20,9 @@ no_index:
     - t
 requires:
   Carp: 0
-  Log::Any: 0.05
+  Log::Any: 0.10
   Scope::Guard: 0
   perl: 5.6.0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
