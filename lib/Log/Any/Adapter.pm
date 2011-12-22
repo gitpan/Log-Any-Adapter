@@ -6,7 +6,7 @@ use Log::Any::Adapter::Util qw(make_method);
 use strict;
 use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # Checked by Log::Any to see if get_logger should be forwarded here
 #
@@ -26,13 +26,17 @@ foreach my $method (qw(get_logger set remove)) {
 
 1;
 
-__END__
+
 
 =pod
 
 =head1 NAME
 
 Log::Any::Adapter -- Tell Log::Any where to send its logs
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -172,19 +176,15 @@ created will automatically adjust to the new stack. For example:
 
 L<Log::Any|Log::Any>
 
-=head1 AUTHOR
+=head1 COPYRIGHT AND LICENSE
 
-Jonathan Swartz
+This software is copyright (c) 2011 by Jonathan Swartz.
 
-=head1 COPYRIGHT & LICENSE
-
-Copyright (C) 2009 Jonathan Swartz.
-
-Log::Any is provided "as is" and without any express or implied warranties,
-including, without limitation, the implied warranties of merchantibility and
-fitness for a particular purpose.
-
-This program is free software; you canredistribute it and/or modify it under
-the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+

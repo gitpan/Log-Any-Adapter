@@ -1,7 +1,15 @@
 
+
+__END__
+=pod
+
 =head1 NAME
 
 Log::Any::Adapter::Development -- Manual for developing new Log::Any adapters
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -206,23 +214,16 @@ Returns a combined list of logging and detection methods.
 
 =back
 
-=head1 AUTHOR
-
-Jonathan Swartz
-
 =head1 SEE ALSO
 
 L<Log::Any>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009 Jonathan Swartz.
+This software is copyright (c) 2011 by Jonathan Swartz.
 
-Log::Any is provided "as is" and without any express or implied warranties,
-including, without limitation, the implied warranties of merchantibility and
-fitness for a particular purpose.
-
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

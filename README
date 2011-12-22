@@ -1,6 +1,9 @@
 NAME
     Log::Any::Adapter -- Tell Log::Any where to send its logs
 
+VERSION
+    version 0.04
+
 SYNOPSIS
         use Log::Any::Adapter;
 
@@ -115,16 +118,9 @@ MULTIPLE ADAPTER SETTINGS
 SEE ALSO
     Log::Any
 
-AUTHOR
-    Jonathan Swartz
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Jonathan Swartz.
 
-COPYRIGHT & LICENSE
-    Copyright (C) 2009 Jonathan Swartz.
-
-    Log::Any is provided "as is" and without any express or implied
-    warranties, including, without limitation, the implied warranties of
-    merchantibility and fitness for a particular purpose.
-
-    This program is free software; you canredistribute it and/or modify it
-    under the same terms as Perl itself.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

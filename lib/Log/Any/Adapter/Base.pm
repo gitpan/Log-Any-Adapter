@@ -1,4 +1,7 @@
 package Log::Any::Adapter::Base;
+BEGIN {
+  $Log::Any::Adapter::Base::VERSION = '0.04';
+}
 use Log::Any;
 use Log::Any::Adapter::Util qw(make_method);
 use strict;
@@ -25,7 +28,7 @@ sub delegate_method_to_slot {
 
 1;
 
-__END__
+
 
 =pod
 
@@ -33,21 +36,25 @@ __END__
 
 Log::Any::Adapter::Base
 
+=head1 VERSION
+
+version 0.04
+
 =head1 DESCRIPTION
 
 This is the base class for Log::Any adapters. See
 L<Log::Any::Adapter::Development|Log::Any::Adapter::Development> for
 information on developing Log::Any adapters.
 
-=head1 AUTHOR
+=head1 COPYRIGHT AND LICENSE
 
-Jonathan Swartz
+This software is copyright (c) 2011 by Jonathan Swartz.
 
-=head1 COPYRIGHT & LICENSE
-
-Copyright (C) 2009 Jonathan Swartz, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+
