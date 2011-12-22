@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Base;
 BEGIN {
-  $Log::Any::Adapter::Base::VERSION = '0.04';
+  $Log::Any::Adapter::Base::VERSION = '0.05';
 }
 use Log::Any;
 use Log::Any::Adapter::Util qw(make_method);
@@ -38,7 +38,7 @@ Log::Any::Adapter::Base
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 
