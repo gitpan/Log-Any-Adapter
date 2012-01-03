@@ -25,9 +25,14 @@
             "ExtUtils::MakeMaker" : "6.30"
          }
       },
-      "test" : {
+      "runtime" : {
          "requires" : {
             "Devel::GlobalDestruction" : 0,
+            "Guard" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
             "Test::More" : 0
          }
       }
@@ -44,6 +49,6 @@
          "web" : "https://github.com/jonswar/perl-log-any-adapter"
       }
    },
-   "version" : "0.05"
+   "version" : "0.06"
 }
 

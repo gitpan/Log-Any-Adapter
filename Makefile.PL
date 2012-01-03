@@ -12,7 +12,6 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Tell Log::Any where to send its logs',
   'AUTHOR' => 'Jonathan Swartz <swartz@pobox.com>',
   'BUILD_REQUIRES' => {
-    'Devel::GlobalDestruction' => '0',
     'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
@@ -22,8 +21,11 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'Log::Any::Adapter',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.05',
+  'PREREQ_PM' => {
+    'Devel::GlobalDestruction' => '0',
+    'Guard' => '0'
+  },
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

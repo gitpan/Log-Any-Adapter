@@ -2,6 +2,10 @@ Revision history for Log-Any-Adapter
 
 ** denotes an incompatible change
 
+0.06  Jan 3, 2012
+
+- switch from Scope::Guard to Guard, require Guard in deps
+
 0.05  Dec 21, 2011
 
 - remove release directory
