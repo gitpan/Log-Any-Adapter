@@ -2,7 +2,7 @@ NAME
     Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 VERSION
-    version 0.06
+    version 0.07
 
 SYNOPSIS
         use Log::Any::Adapter;

@@ -1,12 +1,13 @@
 package Log::Any::Adapter;
+BEGIN {
+  $Log::Any::Adapter::VERSION = '0.07';
+}
 use 5.006;
 use Log::Any;
 use Log::Any::Manager;
 use Log::Any::Adapter::Util qw(make_method);
 use strict;
 use warnings;
-
-our $VERSION = '0.04';
 
 # Checked by Log::Any to see if get_logger should be forwarded here
 #
@@ -36,7 +37,7 @@ Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 

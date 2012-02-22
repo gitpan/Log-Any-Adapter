@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Test::Memory;
 BEGIN {
-  $Log::Any::Adapter::Test::Memory::VERSION = '0.06';
+  $Log::Any::Adapter::Test::Memory::VERSION = '0.07';
 }
 use Log::Any::Adapter::Util qw(make_method);
 use strict;
