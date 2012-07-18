@@ -1,6 +1,6 @@
 package Log::Any::Adapter;
 BEGIN {
-  $Log::Any::Adapter::VERSION = '0.07';
+  $Log::Any::Adapter::VERSION = '0.08';
 }
 use 5.006;
 use Log::Any;
@@ -25,6 +25,11 @@ foreach my $method (qw(get_logger set remove)) {
     );
 }
 
+sub import {
+    my $pkg = shift;
+    $pkg->set(@_) if (@_);
+}
+
 1;
 
 
@@ -37,11 +42,15 @@ Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
-    use Log::Any::Adapter;
+    # Log to a file, or stdout, or stderr for all categories
+    #
+    use Log::Any::Adapter ('File', '/path/to/file.log');
+    use Log::Any::Adapter ('Stdout');
+    use Log::Any::Adapter ('Stderr');
 
     # Use Log::Log4perl for all categories
     #
@@ -81,23 +90,52 @@ auto-loaded when you call one of the methods below.
 In order to use a logging mechanism with C<Log::Any>, there needs to be an
 adapter class for it. Typically this is named Log::Any::Adapter::I<something>.
 
-The following adapters are available on CPAN as of this writing:
+=head2 Adapters in this distribution
+
+Three basic adapters come with this distribution -- L<File>, L<Stdout> and
+L<Stderr>:
+
+    use Log::Any::Adapter ('File', '/path/to/file.log');
+    use Log::Any::Adapter ('Stdout');
+    use Log::Any::Adapter ('Stderr');
+
+    # or
+
+    use Log::Any::Adapter;
+    Log::Any::Adapter->set('File', '/path/to/file.log');
+    Log::Any::Adapter->set('Stdout');
+    Log::Any::Adapter->set('Stderr');
+
+All of them simply output the message and newline to the specified destination;
+a datestamp prefix is added in the C<File> case. For anything more complex
+you'll want to use a more robust adapter from CPAN.
+
+=head2 Adapters on CPAN
+
+A sampling of adapters available on CPAN as of this writing:
 
 =over
 
 =item *
 
-L<Log::Any::Adapter::Log4perl|Log::Any::Adapter::Log4perl> - work with log4perl
+L<Log::Any::Adapter::Log4perl|Log::Any::Adapter::Log4perl>
 
 =item *
 
-L<Log::Any::Adapter::Dispatch|Log::Any::Adapter::Dispatch> - work with
-Log::Dispatch or Log::Dispatch::Config
+L<Log::Any::Adapter::Dispatch|Log::Any::Adapter::Dispatch>
+
+=item *
+
+L<Log::Any::Adapter::FileHandle|Log::Any::Adapter::FileHandle>
+
+=item *
+
+L<Log::Any::Adapter::Syslog|Log::Any::Adapter::Syslog>
 
 =back
 
-You may also find other adapters on CPAN by searching for "Log::Any::Adapter",
-or create your own adapter. See
+You may find other adapters on CPAN by searching for "Log::Any::Adapter", or
+create your own adapter. See
 L<Log::Any::Adapter::Development|Log::Any::Adapter::Development> for more
 information on the latter.
 
@@ -147,6 +185,11 @@ adapter setting will be removed. e.g.
 
 C<set> returns an entry object, which can be passed to C<remove>.
 
+=item use Log::Any::Adapter (...)
+
+If you pass arguments to C<use Log::Any::Adapter>, it calls C<<
+Log::Any::Adapter->set >> with those arguments.
+
 =item Log::Any::Adapter->remove (entry)
 
 Remove an I<entry> previously returned by C<set>.
@@ -167,7 +210,7 @@ created will automatically adjust to the new stack. For example:
     $log->error("aiggh!");   # this goes nowhere
     ...
     {
-        Log::Any::Adapter->set({ local => \my $lex }, 'Log4perl');
+        Log::Any::Adapter->set({ lexically => \my $lex }, 'Log4perl');
         $log->error("aiggh!");   # this goes to log4perl
         ...
     }

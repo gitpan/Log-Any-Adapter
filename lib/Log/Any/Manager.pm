@@ -1,6 +1,6 @@
 package Log::Any::Manager;
 BEGIN {
-  $Log::Any::Manager::VERSION = '0.07';
+  $Log::Any::Manager::VERSION = '0.08';
 }
 use strict;
 use warnings;
@@ -29,7 +29,7 @@ sub new {
                     entry   => $null_entry
                 }
               )
-          } keys(%Log::Any::NullAdapters)
+        } keys(%Log::Any::NullAdapters)
     };
 
     return $self;
@@ -64,7 +64,7 @@ sub _new_adapter_for_entry {
     my ( $self, $entry, $category ) = @_;
 
     return $entry->{adapter_class}
-      ->new( %{ $entry->{adapter_params} }, category => $category );
+      ->new( @{ $entry->{adapter_params} }, category => $category );
 }
 
 sub set {
@@ -73,7 +73,7 @@ sub set {
     if ( ref( $_[0] ) eq 'HASH' ) {
         $options = shift(@_);
     }
-    my ( $adapter_name, %adapter_params ) = @_;
+    my ( $adapter_name, @adapter_params ) = @_;
 
     croak "expected adapter name"
       unless defined($adapter_name) && $adapter_name =~ /\S/;
@@ -94,7 +94,7 @@ sub set {
     );
     require_dynamic($adapter_class);
 
-    my $entry = $self->_new_entry( $pattern, $adapter_class, \%adapter_params );
+    my $entry = $self->_new_entry( $pattern, $adapter_class, \@adapter_params );
     unshift( @{ $self->{entries} }, $entry );
 
     $self->_reselect_matching_adapters($pattern);

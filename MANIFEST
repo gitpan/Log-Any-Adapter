@@ -8,11 +8,16 @@ Makefile.PL
 lib/Log/Any/Adapter.pm
 lib/Log/Any/Adapter/Base.pm
 lib/Log/Any/Adapter/Development.pod
+lib/Log/Any/Adapter/File.pm
+lib/Log/Any/Adapter/FileScreenBase.pm
+lib/Log/Any/Adapter/Stderr.pm
+lib/Log/Any/Adapter/Stdout.pm
 lib/Log/Any/Adapter/Test/Memory.pm
 lib/Log/Any/Adapter/Util.pm
 lib/Log/Any/Manager.pm
 t/00-load.t
 t/errors.t
+t/filescreen.t
+t/import.t
 t/memory.t
 t/sprintf.t
-weaver.ini
