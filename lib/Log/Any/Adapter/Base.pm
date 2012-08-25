@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Base;
 BEGIN {
-  $Log::Any::Adapter::Base::VERSION = '0.08';
+  $Log::Any::Adapter::Base::VERSION = '0.09';
 }
 use Log::Any;
 use Log::Any::Adapter::Util qw(make_method);
@@ -34,11 +34,11 @@ sub delegate_method_to_slot {
 
 =head1 NAME
 
-Log::Any::Adapter::Base
+Log::Any::Adapter::Base - Base class for Log::Any adapters
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

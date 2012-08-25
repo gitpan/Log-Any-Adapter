@@ -27,4 +27,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Any-Adapter
   repository: git://github.com/jonswar/perl-log-any-adapter.git
-version: 0.08
+version: 0.09

@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Stdout;
 BEGIN {
-  $Log::Any::Adapter::Stdout::VERSION = '0.08';
+  $Log::Any::Adapter::Stdout::VERSION = '0.09';
 }
 use strict;
 use warnings;
@@ -21,11 +21,11 @@ __PACKAGE__->make_logging_methods(
 
 =head1 NAME
 
-Log::Any::Adapter::Stdout
+Log::Any::Adapter::Stdout - Simple adapter for logging to STDOUT
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
