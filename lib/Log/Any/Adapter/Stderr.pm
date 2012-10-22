@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Stderr;
 BEGIN {
-  $Log::Any::Adapter::Stderr::VERSION = '0.09';
+  $Log::Any::Adapter::Stderr::VERSION = '0.10';
 }
 use strict;
 use warnings;
@@ -25,7 +25,7 @@ Log::Any::Adapter::Stderr - Simple adapter for logging to STDERR
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

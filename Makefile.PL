@@ -22,13 +22,13 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Log::Any::Adapter',
   'PREREQ_PM' => {
-    'Capture::Tiny' => '0',
+    'Capture::Tiny' => '0.12',
     'Carp' => '0',
     'Devel::GlobalDestruction' => '0',
     'Guard' => '0',
     'Log::Any' => '0'
   },
-  'VERSION' => '0.09',
+  'VERSION' => '0.10',
   'test' => {
     'TESTS' => 't/*.t'
   }

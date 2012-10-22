@@ -1,6 +1,6 @@
 package Log::Any::Manager;
 BEGIN {
-  $Log::Any::Manager::VERSION = '0.09';
+  $Log::Any::Manager::VERSION = '0.10';
 }
 use strict;
 use warnings;

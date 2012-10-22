@@ -19,7 +19,7 @@ no_index:
     - lib/Log/Any/Adapter/Test/Memory.pm
     - lib/Log/Any/Adapter/Util.pm
 requires:
-  Capture::Tiny: 0
+  Capture::Tiny: 0.12
   Carp: 0
   Devel::GlobalDestruction: 0
   Guard: 0
@@ -27,4 +27,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Any-Adapter
   repository: git://github.com/jonswar/perl-log-any-adapter.git
-version: 0.09
+version: 0.10

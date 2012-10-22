@@ -2,7 +2,7 @@ NAME
     Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 VERSION
-    version 0.09
+    version 0.10
 
 SYNOPSIS
         # Log to a file, or stdout, or stderr for all categories

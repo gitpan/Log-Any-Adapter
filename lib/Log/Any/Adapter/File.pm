@@ -1,6 +1,6 @@
 package Log::Any::Adapter::File;
 BEGIN {
-  $Log::Any::Adapter::File::VERSION = '0.09';
+  $Log::Any::Adapter::File::VERSION = '0.10';
 }
 use strict;
 use warnings;
@@ -39,7 +39,7 @@ Log::Any::Adapter::File - Simple adapter for logging to files
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

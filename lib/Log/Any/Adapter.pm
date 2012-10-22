@@ -1,6 +1,6 @@
 package Log::Any::Adapter;
 BEGIN {
-  $Log::Any::Adapter::VERSION = '0.09';
+  $Log::Any::Adapter::VERSION = '0.10';
 }
 use 5.006;
 use Log::Any;
@@ -42,7 +42,7 @@ Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

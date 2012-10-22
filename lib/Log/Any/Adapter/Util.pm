@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Util;
 BEGIN {
-  $Log::Any::Adapter::Util::VERSION = '0.09';
+  $Log::Any::Adapter::Util::VERSION = '0.10';
 }
 use Data::Dumper;
 use strict;
