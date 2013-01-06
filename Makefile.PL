@@ -9,28 +9,29 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Tell Log::Any where to send its logs',
-  'AUTHOR' => 'Jonathan Swartz <swartz@pobox.com>',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0'
+  "ABSTRACT" => "Tell Log::Any where to send its logs",
+  "AUTHOR" => "Jonathan Swartz <swartz\@pobox.com>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Log-Any-Adapter',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Log::Any::Adapter',
-  'PREREQ_PM' => {
-    'Capture::Tiny' => '0.12',
-    'Carp' => '0',
-    'Devel::GlobalDestruction' => '0',
-    'Guard' => '0',
-    'Log::Any' => '0'
+  "DISTNAME" => "Log-Any-Adapter",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Log::Any::Adapter",
+  "PREREQ_PM" => {
+    "Capture::Tiny" => "0.12",
+    "Carp" => 0,
+    "Devel::GlobalDestruction" => 0,
+    "Guard" => 0,
+    "IO::File" => 0,
+    "Log::Any" => 0
   },
-  'VERSION' => '0.10',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.11",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

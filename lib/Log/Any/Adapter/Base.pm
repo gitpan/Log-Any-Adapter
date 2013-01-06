@@ -1,6 +1,6 @@
 package Log::Any::Adapter::Base;
-BEGIN {
-  $Log::Any::Adapter::Base::VERSION = '0.10';
+{
+  $Log::Any::Adapter::Base::VERSION = '0.11';
 }
 use Log::Any;
 use Log::Any::Adapter::Util qw(make_method);
@@ -28,7 +28,7 @@ sub delegate_method_to_slot {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -38,7 +38,7 @@ Log::Any::Adapter::Base - Base class for Log::Any adapters
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 
@@ -54,7 +54,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

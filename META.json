@@ -4,7 +4,7 @@
       "Jonathan Swartz <swartz@pobox.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200008, CPAN::Meta::Converter version 2.113640",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -29,15 +29,16 @@
       "runtime" : {
          "requires" : {
             "Capture::Tiny" : "0.12",
-            "Carp" : 0,
-            "Devel::GlobalDestruction" : 0,
-            "Guard" : 0,
-            "Log::Any" : 0
+            "Carp" : "0",
+            "Devel::GlobalDestruction" : "0",
+            "Guard" : "0",
+            "IO::File" : "0",
+            "Log::Any" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : 0
+            "Test::More" : "0"
          }
       }
    },
@@ -53,6 +54,6 @@
          "web" : "https://github.com/jonswar/perl-log-any-adapter"
       }
    },
-   "version" : "0.10"
+   "version" : "0.11"
 }
 

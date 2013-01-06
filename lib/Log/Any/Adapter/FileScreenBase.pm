@@ -1,6 +1,6 @@
 package Log::Any::Adapter::FileScreenBase;
-BEGIN {
-  $Log::Any::Adapter::FileScreenBase::VERSION = '0.10';
+{
+  $Log::Any::Adapter::FileScreenBase::VERSION = '0.11';
 }
 use Log::Any::Adapter::Util qw(make_method);
 use strict;

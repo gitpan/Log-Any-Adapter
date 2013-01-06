@@ -1,6 +1,6 @@
 package Log::Any::Adapter;
-BEGIN {
-  $Log::Any::Adapter::VERSION = '0.10';
+{
+  $Log::Any::Adapter::VERSION = '0.11';
 }
 use 5.006;
 use Log::Any;
@@ -32,7 +32,7 @@ sub import {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -42,7 +42,7 @@ Log::Any::Adapter -- Tell Log::Any where to send its logs
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -228,7 +228,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

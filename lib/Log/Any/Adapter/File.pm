@@ -1,7 +1,8 @@
 package Log::Any::Adapter::File;
-BEGIN {
-  $Log::Any::Adapter::File::VERSION = '0.10';
+{
+  $Log::Any::Adapter::File::VERSION = '0.11';
 }
+use IO::File;
 use strict;
 use warnings;
 use base qw(Log::Any::Adapter::FileScreenBase);
@@ -29,7 +30,7 @@ __PACKAGE__->make_logging_methods(
 
 1;
 
-
+__END__
 
 =pod
 
@@ -39,7 +40,7 @@ Log::Any::Adapter::File - Simple adapter for logging to files
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -65,7 +66,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

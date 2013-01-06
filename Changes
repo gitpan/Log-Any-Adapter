@@ -2,6 +2,10 @@ Revision history for Log-Any-Adapter
 
 ** denotes an incompatible change
 
+0.11  Jan 6, 2013
+
+- Use IO::File in Adapter/File.pm to bring in autoflush - RT #81581
+
 0.10  Oct 22, 2012
 
 - Depend on Capture::Tiny 0.12 - RT #80287 (Andreas Koenig)
